@@ -1,0 +1,40 @@
+.page-header {
+  background: #ffd107;
+  padding: 16px 32px;
+}
+
+.page-header h1, .page-header h1 a {
+  color: #6d0fad;
+  font-size: 36pt;
+  margin: auto;
+}
+
+.page-header a:hover {
+  color: #9756c4;
+}
+
+h1 a {
+  color: #ffd107;
+  font-family: 'Raleway', sans-serif;
+}
+
+a:hover {
+  color: #cba500;
+  text-decoration: none;
+}
+
+.post {
+  color: #ffe267;
+  font-family: 'Roboto', sans-serif;
+  padding: 16px 32px;
+}
+
+.content {
+  background: #6d0fad;
+  margin: auto;
+}
+
+.date {
+  font-style: italic;
+  font-size: 12px;
+}

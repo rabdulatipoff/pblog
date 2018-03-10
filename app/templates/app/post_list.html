@@ -1,22 +1,29 @@
+{% load static %}
 <html>
 	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="{% static 'css/pblog.css' %}">
 		<title>pBlog</title>
 	</head>
 	<body>
-		<div>
+		<div class="page-header">
 			<h1><a href="/">Rustam's pBlog</a></h1>
 		</div>
 
-		{% for post in posts %}
-			<div>
-				<h1><a href="">{{ post.title }}</a></h1>
-				<p>{{ post.text | linebreaksbr }}</p>
-				<p>Published: {{ post.published_date }}</p>
-			</div>
-		{% endfor %}
-
-		<div>
-			<u style="margin: auto;"><a href="/admin">administrate</a></u>
+		<div class="content">
+			{% for post in posts %}
+				<div class="post">
+					<h1><a href="">{{ post.title }}</a></h1>
+					<p>{{ post.text | linebreaksbr }}</p>
+					<div class="date">
+						<p>Published: {{ post.published_date }}</p>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
+
 	</body>
 </html>
