@@ -1,20 +1,33 @@
 .page-header {
 	background: #7808b5;
-	box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, 0.4);
+	color: white !important;
+	font-size: 18pt;
 }
 
-.page-header h1, .page-header h1 a {
-	color: white !important;
-	margin: auto;
+.page-header h1,
+.page-header h1 a,
+.page-header a {
+	color: inherit;
+	font-size: inherit;
+	margin-bottom: 0;
+	margin-right: auto;
+}
+
+.page-header a {
+	margin: 0;
 }
 
 .page-header a:hover {
 	filter: opacity(75%);
 }
 
-h1 a {
-	color: #7808b5 !important;
+h1, h2, h3, h4, h5, h6  {
 	font-family: 'Raleway', sans-serif;
+}
+
+h1 a {
+	color: #7808b5;
 }
 
 a:hover {
@@ -25,12 +38,16 @@ a:hover {
 .post {
 	color: #222222;
 	font-family: 'Roboto', sans-serif;
-	margin-bottom: 1.25rem;
+}
+
+.post + .post {
+	margin-top: 1.25rem;
 }
 
 .content {
 	background: white;
 	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
 }
 
 .date {
