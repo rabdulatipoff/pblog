@@ -1,9 +1,10 @@
 {% load static %}
+<!doctype html>
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
-
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
 		<link rel="stylesheet" href="{% static 'css/pblog.css' %}">
 		<title>pBlog</title>
@@ -11,13 +12,12 @@
 	<body>
 		<header class="page-header navbar navbar-expand-lg">
 			<h1 class="navbar-brand"><a href="/">pBlog</a></h1>
+			<a href="{% url 'post_new' %}" class="top-menu"><span class="fas fa-plus"></span></a>
 		</header>
 
 		<div class="content container-fluid">
-			<div class="list-group">
-				{% block content %}
-				{% endblock %}
-			</div>
+			{% block content %}
+			{% endblock %}
 		</div>
 		
 	</body>
