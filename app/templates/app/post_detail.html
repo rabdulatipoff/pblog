@@ -1,15 +1,5 @@
 {% extends 'app/base.html' %}
 
 {% block content %}
-	<div class="post card">
-		<div class="card-body">
-			<h1 class="card-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-			<p>{{ post.text | linebreaksbr }}</p>
-		</div>
-		{% if post.published_date %}
-			<div class="date card-footer">
-				<small class="text-muted">Published: {{ post.published_date }}</small>
-			</div>
-		{% endif %}
-	</div>
+	{% include 'app/post_template.html' %}
 {% endblock content %}

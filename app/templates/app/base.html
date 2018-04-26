@@ -3,16 +3,17 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
+		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
 		<link rel="stylesheet" href="{% static 'css/pblog.css' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>pBlog</title>
 	</head>
 	<body>
 		<header class="page-header navbar navbar-expand-lg">
 			<h1 class="navbar-brand"><a href="/">pBlog</a></h1>
-			<a href="{% url 'post_new' %}" class="top-menu"><span class="fas fa-plus"></span></a>
+			<a href="{% url 'post_new' %}"><span class="fas fa-plus fa-fw"></span></a>
 		</header>
 
 		<div class="content container-fluid">
