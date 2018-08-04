@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% load recaptcha2 %}
+{% load bootstrap4 %}
+
+{% block content %}
+	{% recaptcha_init %}
+	<h1>Log in</h1>
+	<form method="POST" class="form-group" enctype="multipart/form-data">
+		{% csrf_token %}
+		{% bootstrap_form form %}
+		<button type="submit" class="save btn btn-success">Login</button>
+	</form>
+{% endblock content %}
