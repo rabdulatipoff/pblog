@@ -1,11 +1,14 @@
 {% load static %}
+{% load bootstrap4 %}
 <!doctype html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+		{% bootstrap_css %}
+		{% bootstrap_javascript jquery='full' %}
 
-		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+		<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+		<link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
 		<link rel="stylesheet" href="{% static 'css/pblog.css' %}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>pBlog</title>
