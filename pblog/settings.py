@@ -113,8 +113,10 @@ LOGIN_URL = '/login/'
 APPEND_SLASH = True
 
 # ReCaptcha settings
+# Don't forget to set the key values
 RECAPTCHA_PRIVATE_KEY = ''
 RECAPTCHA_PUBLIC_KEY = ''
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
