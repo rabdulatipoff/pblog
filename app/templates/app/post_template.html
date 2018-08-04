@@ -1,0 +1,14 @@
+<div class="post card">
+	<div class="card-body">
+		<h1 class="card-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+		{% if post.picture %}
+			<img src="{{ post.picture.url }}">
+		{% endif %}
+		<p>{{ post.text | linebreaksbr }}</p>
+	</div>
+	{% if post.published_date %}
+		<div class="date card-footer">
+			<small class="text-muted">Published on {{ post.published_date }} by {{ post.author }}</small>
+		</div>
+	{% endif %}
+</div>
