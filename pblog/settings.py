@@ -25,8 +25,8 @@ SECRET_KEY = '&0o0&h*l5%!648yk^ol^s28_%pxvp!fvk)ojokxfewv=4fgkw7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Enabled '*' for testing, must be configured for production use
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # reCaptcha v2
+    'snowpenguin.django.recaptcha2',
+    # Bootstrap 4
+    'bootstrap4',
+    # The core app
     'app',
 ]
 
@@ -101,7 +106,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Custom login URL
+LOGIN_URL = '/login/'
 
+# Append slash if there's no match in the URLconf for the request URL
+APPEND_SLASH = True
+
+# ReCaptcha settings
+RECAPTCHA_PRIVATE_KEY = ''
+RECAPTCHA_PUBLIC_KEY = ''
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
