@@ -8,7 +8,9 @@
 	</div>
 	{% if post.published_date %}
 		<div class="date card-footer">
-			<small class="text-muted">Published on {{ post.published_date }} by {{ post.author }}</small>
+			<small class="text-muted">
+				Published on {{ post.published_date }} by <a href="{% url 'user_posts' username=post.author %}">{{ post.author }}</a>
+			</small>
 		</div>
 	{% endif %}
 </div>

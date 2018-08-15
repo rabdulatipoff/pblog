@@ -5,13 +5,16 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
+from django.contrib.auth.models import User
 from .models import Post
 
 from .forms import PostForm
 from .forms import LoginForm
 
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+def post_list(request, username = None):
+    posts = Post.objects.filter(published_date__lte = timezone.now()).order_by('-published_date')
+    if username:
+        posts = posts.filter(author = User.objects.get(username = username))
     return render(request, 'app/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
