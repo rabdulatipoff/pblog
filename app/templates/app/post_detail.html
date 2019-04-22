@@ -2,4 +2,16 @@
 
 {% block content %}
 	{% include 'app/post_template.html' %}
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Occurences</th>
+        </tr>
+        {% for word in wordstat %}
+        <tr>
+            <td>{{ word.0 }}</td>
+            <td>{{ word.1 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock content %}

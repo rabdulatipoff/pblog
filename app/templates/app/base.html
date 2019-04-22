@@ -16,6 +16,7 @@
 	<body>
 		<header class="page-header navbar navbar-expand-lg">
 			<h1 class="navbar-brand"><a href="/">pBlog</a></h1>
+            {% include 'app/search_form.html' %}
 			<a href="{% url 'post_new' %}"><span class="fas fa-plus fa-fw"></span></a>
 		</header>
 

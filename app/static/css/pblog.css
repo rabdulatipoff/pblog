@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
 
+
+h1, h2, h3, h4, h5, h6  {
+	font-family: 'Raleway', sans-serif;
+}
+
 .page-header {
 	background: #7808b5;
 	color: white !important;
@@ -24,8 +29,10 @@
 	filter: opacity(75%);
 }
 
-h1, h2, h3, h4, h5, h6  {
-	font-family: 'Raleway', sans-serif;
+.page-header input[type="text"] {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: .5rem;
 }
 
 a {

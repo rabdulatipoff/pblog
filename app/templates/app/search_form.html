@@ -1,0 +1,5 @@
+<form method="POST" action="/search/">
+    {% csrf_token %}
+    <input type="text" name="postsearch">
+    <input type="submit" style="visibility: hidden; display: none;">
+</form>
